@@ -1,0 +1,6 @@
+h1,
+h2 {
+	color: var(--bs-primary);
+	font-size: 60px;
+	padding: 5vh 0;
+}

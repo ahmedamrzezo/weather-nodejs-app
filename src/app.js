@@ -44,7 +44,7 @@ app.get('/weather', (req, res) => {
 			if (err) {
 				return res.send({ error: err });
 			}
-			forecast(cords[0], cords[1], (err, forecastData) => {
+			forecast.getForecastData(cords[0], cords[1], (err, forecastData) => {
 				if (err) {
 					return res.send({ error: err });
 				}

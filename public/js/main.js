@@ -1,7 +1,7 @@
 const form = document.querySelector('.weather-form');
 
 const fetchForecast = (address) => {
-	return fetch(`http://localhost:3555/weather?address=${address}`, {
+	return fetch(`/weather?address=${address}`, {
 		method: 'GET',
 		headers: {
 			Accept: 'application/json',

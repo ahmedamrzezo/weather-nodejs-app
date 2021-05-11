@@ -9,6 +9,8 @@ const app = express();
 const geocode = require('../utils/geocode');
 const forecast = require('../utils/forecast');
 
+const PORT = process.env.PORT || 3555;
+
 const PUBLIC_PATH = path.join(__dirname, '../public');
 const VIEWS_PATH = path.join(__dirname, '../templates/views');
 const PARTIALS_PATH = path.join(__dirname, '../templates/partials');
@@ -79,6 +81,6 @@ app.get('**', (req, res) => {
 	res.render('help', { title: '404', help: 'This page is not Found' });
 });
 
-app.listen(3555, () => {
-	console.log('Server is up');
+app.listen(PORT, () => {
+	console.log('Server is up, port ', PORT);
 });
